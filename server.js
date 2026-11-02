@@ -23,6 +23,10 @@ app.get("/about", (req, res) => {
     res.send("This is my first backend API!");
 });
 
+const userRoutes = require("./routes/userRoutes");
+
+app.use("/users", userRoutes);
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
